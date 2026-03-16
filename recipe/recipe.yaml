@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.23.0
+  version: "0.24.0"
 
 package:
   name: beetcamp
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/beetcamp/beetcamp-${{ version }}.tar.gz
-  sha256: c355708f738e4b22c4a60bd9e22e8f5a5d4b965a0d1bcd608a43abb753ac03fe
+  sha256: e3edcfd79ca7ccf8cc6c8a64aef2b7dbefab20d319bd72e42b048f59863e12a6
 
 build:
   number: 0
@@ -17,8 +17,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - beetcamp = beetsplug.bandcamp:main
-
+      - beetcamp = beetcamp:main
 requirements:
   host:
     - python ${{ python_min }}*
@@ -34,7 +33,7 @@ requirements:
 tests:
   - python:
       imports:
-        - beetsplug.bandcamp
+        - beetcamp
       pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
