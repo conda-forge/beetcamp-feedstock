@@ -17,8 +17,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - beetcamp = beetsplug.bandcamp:main
-
+      - beetcamp = beetcamp:main
 requirements:
   host:
     - python ${{ python_min }}*
@@ -34,7 +33,7 @@ requirements:
 tests:
   - python:
       imports:
-        - beetsplug.bandcamp
+        - beetcamp
       pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
