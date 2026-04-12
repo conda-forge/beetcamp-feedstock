@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.24.1"
+  version: "0.24.2"
 
 package:
   name: beetcamp
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/beetcamp/beetcamp-${{ version }}.tar.gz
-  sha256: d891f6dabc1ee4c082445bfd74b4cbcbe28bf4c62fe4e6e7f5e58149a366b881
+  sha256: 019ce968f96910e5b5daf689b1550ed5a74b07de3e5809005fce7ba44962ea49
 
 build:
   number: 0
