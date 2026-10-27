@@ -38,7 +38,7 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
-    script:
+  - script:
       - beetcamp --help
 
 about:
